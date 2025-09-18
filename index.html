@@ -9,31 +9,81 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root { --primary: #0d6efd; --secondary: #6c757d; --success: #198754; --light: #f8f9fa; }
-        .hero-section { background: linear-gradient(rgba(13, 110, 253, 0.8), rgba(13, 110, 253, 0.9)), url('https://images.unsplash.com/photo-1516387938699-a93567ec168e?ixlib=rb-4.0.3'); background-size: cover; background-position: center; color: white; padding: 5rem 0; }
-        .rating i { color: #ffc107; margin-right: 3px; }
-        .service-card { transition: transform 0.3s; border: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .service-card:hover { transform: translateY(-5px); }
-        .stats-counter { background-color: var(--light); padding: 3rem 0; }
-        .stat-number { font-size: 2.5rem; font-weight: bold; color: var(--primary); }
-        footer { background-color: #343a40; color: white; padding: 2rem 0; }
+        :root {
+            --primary: #0d6efd;
+            --secondary: #6c757d;
+            --success: #198754;
+            --light: #f8f9fa;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(13, 110, 253, 0.8), rgba(13, 110, 253, 0.9)), url('https://images.unsplash.com/photo-1516387938699-a93567ec168e?ixlib=rb-4.0.3');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 5rem 0;
+        }
+        
+        .rating i {
+            color: #ffc107;
+            margin-right: 3px;
+        }
+        
+        .service-card {
+            transition: transform 0.3s;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stats-counter {
+            background-color: var(--light);
+            padding: 3rem 0;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 2rem 0;
+        }
     </style>
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
-            <a class="navbar-brand" href="#"><i class="fas fa-star me-2"></i>Survei Kepuasan</a>
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-star me-2"></i>Survei Kepuasan
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#layanan">Layanan</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#statistik">Statistik</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#testimoni">Testimoni</a></li>
-                    <li class="nav-item"><a class="btn btn-light ms-2" href="#form-survei">Isi Survei</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#layanan">Layanan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#statistik">Statistik</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimoni">Testimoni</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-light ms-2" href="#form-survei">Isi Survei</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -55,13 +105,66 @@
                 <h2 class="fw-bold">Layanan Kami</h2>
                 <p class="text-muted">Berikan penilaian untuk layanan yang Anda terima</p>
             </div>
+            
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="card service-card h-100">
                         <div class="card-body text-center p-4">
-                            <div class="mb-3"><i class="fas fa-file-alt fa-3x text-primary"></i></div>
+                            <div class="mb-3">
+                                <i class="fas fa-file-alt fa-3x text-primary"></i>
+                            </div>
                             <h4>Layanan Administrasi</h4>
                             <p class="text-muted">Pengurusan dokumen, surat menyurat, dan perizinan</p>
+                            <div class="rating mb-3">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="ms-1">4.5/5</span>
+                            </div>
+                            <a href="#form-survei" class="btn btn-outline-primary">Beri Nilai</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card service-card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <i class="fas fa-users fa-3x text-primary"></i>
+                            </div>
+                            <h4>Layanan Publik</h4>
+                            <p class="text-muted">Pelayanan masyarakat dan informasi umum</p>
+                            <div class="rating mb-3">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="ms-1">4/5</span>
+                            </div>
+                            <a href="#form-survei" class="btn btn-outline-primary">Beri Nilai</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card service-card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-3">
+                                <i class="fas fa-hands-helping fa-3x text-primary"></i>
+                            </div>
+                            <h4>Layanan Bantuan</h4>
+                            <p class="text-muted">Bantuan sosial, pengaduan, dan konsultasi</p>
+                            <div class="rating mb-3">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="ms-1">5/5</span>
+                            </div>
                             <a href="#form-survei" class="btn btn-outline-primary">Beri Nilai</a>
                         </div>
                     </div>
@@ -74,10 +177,22 @@
     <section id="statistik" class="stats-counter">
         <div class="container">
             <div class="row text-center">
-                <div class="col-md-3 col-6"><div class="stat-number" id="total-responses">0</div><p>Total Responden</p></div>
-                <div class="col-md-3 col-6"><div class="stat-number" id="average-rating">0</div><p>Rata-rata Kepuasan</p></div>
-                <div class="col-md-3 col-6"><div class="stat-number" id="services-rated">0</div><p>Layanan Dinilai</p></div>
-                <div class="col-md-3 col-6"><div class="stat-number" id="satisfaction-rate">0%</div><p>Tingkat Kepuasan</p></div>
+                <div class="col-md-3 col-6 mb-4 mb-md-0">
+                    <div class="stat-number" id="total-responses">1,245</div>
+                    <p>Total Responden</p>
+                </div>
+                <div class="col-md-3 col-6 mb-4 mb-md-0">
+                    <div class="stat-number" id="average-rating">4.3</div>
+                    <p>Rata-rata Kepuasan</p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-number" id="services-rated">12</div>
+                    <p>Layanan Dinilai</p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-number" id="satisfaction-rate">92%</div>
+                    <p>Tingkat Kepuasan</p>
+                </div>
             </div>
         </div>
     </section>
@@ -89,15 +204,61 @@
                 <h2 class="fw-bold">Testimoni Masyarakat</h2>
                 <p class="text-muted">Apa kata mereka tentang layanan kami</p>
             </div>
+            
             <div class="row">
                 <div class="col-md-8 mx-auto">
                     <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner" id="testimonial-list"></div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="card testimonial-card">
+                                    <div class="card-body text-center p-4">
+                                        <div class="rating mb-3">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <p class="fst-italic mb-4">"Pelayanan yang sangat memuaskan, petugas ramah dan prosesnya cepat. Terima kasih atas bantuannya."</p>
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <img src="https://ui-avatars.com/api/?name=Budi+Santoso&background=0D8ABC&color=fff" alt="Avatar" class="rounded-circle me-3" width="50">
+                                            <div>
+                                                <h5 class="mb-0">Budi Santoso</h5>
+                                                <small class="text-muted">Warga Kelurahan Merdeka</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="card testimonial-card">
+                                    <div class="card-body text-center p-4">
+                                        <div class="rating mb-3">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                        <p class="fst-italic mb-4">"Proses pengurusan dokumen sudah baik, namun masih perlu perbaikan dalam hal waktu tunggu."</p>
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <img src="https://ui-avatars.com/api/?name=Siti+Maryam&background=0D8ABC&color=fff" alt="Avatar" class="rounded-circle me-3" width="50">
+                                            <div>
+                                                <h5 class="mb-0">Siti Maryam</h5>
+                                                <small class="text-muted">Warga Kelurahan Sejahtera</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
                         </button>
                         <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
                         </button>
                     </div>
                 </div>
@@ -123,27 +284,84 @@
                                         <option value="Administrasi">Layanan Administrasi</option>
                                         <option value="Publik">Layanan Publik</option>
                                         <option value="Bantuan">Layanan Bantuan</option>
+                                        <option value="Lainnya">Layanan Lainnya</option>
                                     </select>
                                 </div>
+                                
                                 <div class="mb-3">
                                     <label class="form-label">Penilaian Kepuasan</label>
                                     <div class="d-flex justify-content-between">
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="rating" value="1" required>
-                                            <label class="form-check-label">Sangat Buruk</label>
+                                            <input class="form-check-input" type="radio" name="rating" id="rating1" value="1" required>
+                                            <label class="form-check-label" for="rating1">
+                                                <i class="fas fa-frown text-danger"></i>
+                                                <div>Sangat Buruk</div>
+                                            </label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="rating" value="5">
-                                            <label class="form-check-label">Sangat Baik</label>
+                                            <input class="form-check-input" type="radio" name="rating" id="rating2" value="2">
+                                            <label class="form-check-label" for="rating2">
+                                                <i class="fas fa-meh text-warning"></i>
+                                                <div>Buruk</div>
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="rating" id="rating3" value="3">
+                                            <label class="form-check-label" for="rating3">
+                                                <i class="fas fa-smile text-secondary"></i>
+                                                <div>Cukup</div>
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="rating" id="rating4" value="4">
+                                            <label class="form-check-label" for="rating4">
+                                                <i class="fas fa-smile-beam text-info"></i>
+                                                <div>Baik</div>
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="rating" id="rating5" value="5">
+                                            <label class="form-check-label" for="rating5">
+                                                <i class="fas fa-laugh text-success"></i>
+                                                <div>Sangat Baik</div>
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="mb-3"><label for="comments" class="form-label">Komentar/Saran</label><textarea class="form-control" id="comments" rows="3"></textarea></div>
-                                <div class="mb-3"><label for="name" class="form-label">Nama</label><input type="text" id="name" class="form-control"></div>
-                                <div class="mb-3"><label for="email" class="form-label">Email</label><input type="email" id="email" class="form-control"></div>
-                                <div class="text-center mt-4"><button type="submit" class="btn btn-primary btn-lg"><i class="fas fa-paper-plane me-2"></i>Kirim Penilaian</button></div>
+                                
+                                <div class="mb-3">
+                                    <label for="comments" class="form-label">Komentar/Saran</label>
+                                    <textarea class="form-control" id="comments" rows="3" placeholder="Berikan komentar atau saran untuk perbaikan layanan..."></textarea>
+                                </div>
+                                
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="anonymous">
+                                    <label class="form-check-label" for="anonymous">Sembunyikan identitas (anonim)</label>
+                                </div>
+                                
+                                <div class="mb-3" id="identity-fields">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="name" class="form-label">Nama</label>
+                                            <input type="text" class="form-control" id="name">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="email">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="text-center mt-4">
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <i class="fas fa-paper-plane me-2"></i>Kirim Penilaian
+                                    </button>
+                                </div>
                             </form>
-                            <div id="form-alert" class="alert alert-success mt-3 d-none">Terima kasih atas penilaian Anda!</div>
+                            
+                            <div id="form-alert" class="alert alert-success mt-3 d-none" role="alert">
+                                Terima kasih atas penilaian Anda! Masukan Anda sangat berharga bagi kami.
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -153,51 +371,76 @@
 
     <!-- Footer -->
     <footer class="text-center">
-        <div class="container"><p>&copy; 2023 Sistem Penilaian Kepuasan Masyarakat</p></div>
+        <div class="container">
+            <p>&copy; 2023 Sistem Penilaian Kepuasan Masyarakat. All rights reserved.</p>
+            <div class="mt-2">
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
     <script>
-        // FORM SUBMIT ke Google Sheets
+        // Toggle identity fields based on anonymous checkbox
+        document.getElementById('anonymous').addEventListener('change', function() {
+            const identityFields = document.getElementById('identity-fields');
+            identityFields.style.display = this.checked ? 'none' : 'block';
+        });
+        
+        // Form submission handling
         document.getElementById('satisfaction-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            const formData = {
-                service: document.getElementById('service').value,
-                rating: document.querySelector('input[name="rating"]:checked').value,
-                comments: document.getElementById('comments').value,
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value
+            
+            // In a real implementation, this would send data to the backend which then connects to Google Sheets
+            // For demonstration, we'll just show a success message
+            
+            // Show success message
+            document.getElementById('form-alert').classList.remove('d-none');
+            
+            // Reset form
+            this.reset();
+            
+            // Scroll to alert
+            document.getElementById('form-alert').scrollIntoView({ behavior: 'smooth' });
+            
+            // In a real implementation, you would send the data to your backend or directly to Google Sheets
+            // using the Google Sheets API or a service like FormSubmit
+        });
+        
+        // Animated counter for statistics
+        function animateValue(id, start, end, duration) {
+            const obj = document.getElementById(id);
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                obj.innerHTML = Math.floor(progress * (end - start) + start);
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
             };
-            fetch("URL_WEB_APP_GOOGLE_SCRIPT", {
-                method: "POST",
-                body: JSON.stringify(formData),
-                headers: {"Content-Type": "application/json"}
-            })
-            .then(res => res.json())
-            .then(res => {
-                if (res.result === "success") {
-                    document.getElementById('form-alert').classList.remove('d-none');
-                    e.target.reset();
+            window.requestAnimationFrame(step);
+        }
+        
+        // Animate stats when they come into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateValue('total-responses', 0, 1245, 2000);
+                    animateValue('average-rating', 0, 4.3, 2000);
+                    animateValue('services-rated', 0, 12, 2000);
+                    animateValue('satisfaction-rate', 0, 92, 2000);
+                    observer.unobserve(entry.target);
                 }
             });
-        });
-
-        // FETCH Testimoni dari Google Sheets
-        fetch("URL_WEB_APP_SPREADSHEET")
-          .then(res => res.json())
-          .then(data => {
-            const container = document.getElementById("testimonial-list");
-            container.innerHTML = "";
-            data.forEach((item, index) => {
-              let stars = "";
-              for (let i = 0; i < 5; i++) {
-                stars += `<i class=\"fas fa-star${i < item.rating ? '' : '-o'}\"></i>`;
-              }
-              container.innerHTML += `
-                <div class=\"carousel-item ${index === 0 ? 'active' : ''}\">\n                  <div class=\"card testimonial-card\">\n                    <div class=\"card-body text-center p-4\">\n                      <div class=\"rating mb-3\">${stars}</div>\n                      <p class=\"fst-italic mb-4\">\"${item.testimoni}\"</p>\n                      <div class=\"d-flex align-items-center justify-content-center\">\n                        <img src=\"${item.foto}\" class=\"rounded-circle me-3\" width=\"50\">\n                        <div>\n                          <h5 class=\"mb-0\">${item.nama}</h5>\n                          <small class=\"text-muted\">${item.asal}</small>\n                        </div>\n                      </div>\n                    </div>\n                  </div>\n                </div>`;
-            });
-          });
+        }, { threshold: 0.5 });
+        
+        observer.observe(document.getElementById('statistik'));
     </script>
 </body>
 </html>
